@@ -1,0 +1,10 @@
+html
+	head
+		title Restaurant Ordering System
+body
+	include ../partials/header
+	h1 List of Users
+	each user in users
+		if !user.privacy
+			a(href="/users/" + user._id) #{user.username}
+			br

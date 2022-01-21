@@ -1,0 +1,20 @@
+html
+	head
+		title Order Summary
+body
+	include ../partials/header
+	br
+	
+	h1 Order Summar for order ##{order.orderID}	
+	p User who placed order: #{user.username}
+	p Restaurant Name: #{order.restaurantName}
+	h2 Order: 
+	each menu in orderItems 
+		p #{menu.quantity} x #{menu.name}
+	br
+	p Subtotal: #{order.subtotal}
+	p Tax: #{order.tax}
+	p Delivery Fee: #{order.fee}
+	P Total: #{order.total}
+
+

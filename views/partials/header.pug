@@ -1,0 +1,32 @@
+if !session.loggedin
+  #divLoggedout
+    a(href="/") Home
+    |
+    |
+    a(href="/users") Users
+    |
+    |
+    a(href="/register") Register
+    |
+    form(action='/login' method='post')
+      | Username: 
+      input(type='text' name='username' required='')
+      |  Password: 
+      input(type='password' name='password' required='')
+      |
+      |
+      button(type='submit') Login
+else 
+  #divLoggedin
+    a(href="/") Home
+    |
+    |
+    a(href="/users") Users
+    |
+    |
+    a(href="/orders") Order Food 
+    |Hello #{session.username},
+    a(href="/users/" + session.userid) click here to view your profile
+    |
+    |
+    a(href="/logout") Logout

@@ -1,0 +1,26 @@
+html
+	head
+		title #{user.username} - user profile
+body
+	include ../partials/header
+	br
+	
+	h1 Profile for #{user.username}
+
+	if session.current 
+		form(action='/users/togglePrivacy' method='POST')
+			p Private Mode:
+			input#On(type='radio' name='modeSelection' value="true")
+			label(for='On') On
+			br
+			input#Off(type='radio' name='modeSelection' value="false")
+			label(for='Off') Off
+			br
+			input(type='submit' value='Submit')
+	
+	p #[strong Order History:] 
+	if user.orders.length >1
+		each element in user.orders 
+			each order,id in element 
+				a(href="/orders/" + id) #{id}
+				br
