@@ -1,8 +1,5 @@
-Ammar Kareem 101187864
-
-IMPORTANT NOTE:
-PLEASE USE database-initializer.js FILE FROM MY SUBMISSION.
-DO NOT USE THE ONE GIVEN IN BASECODE BECAUSE I MADE CHANGES TO THE FILE
+Created a full-stack restaurant food ordering system where users can login and track their orders.
+Used JavaScript/HTML/MongoDB/Mongoose.
 
 TO RUN THE CODE:
 1)open terminal and start the mongo daemon using command: mongod --dbpath "C:\MongoFiles\data\db"
@@ -17,11 +14,4 @@ npm start
 
 Then open up browser and go to following link:
 http://localhost:3000/
-
-Design decisions:
-Did not use CSS as it was not mentioned on spec sheet
-used router to seperate code making it cleaner
-did not make seperate collection for orders. Instead added array of order objects to each user
-data for 3 restaurants is stored in client side js
-
 
